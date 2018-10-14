@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Application</string>
+    <string name="Login_Email">Email</string>
+    <string name="Login_Password">Password</string>
+    <string name="Login_Login">Log in</string>
+    <string name="Login_ForgotPWD">Forgot Password?</string>
+    <string name="Login_SignUp">Sign up.</string>
+    <string name="Login_SignUpDescription">Don\'t have a account?</string>
+    <string name="SignUp_Email">Email</string>
+    <string name="SignUp_PWD">Password</string>
+    <string name="SignUp_RepeatPWD">Repeat password</string>
+    <string name="SignUp_Sex">Sex</string>
+    <string name="SignUp_Hobby">Hobby</string>
+    <string name="SignUp_Hobby_Travel">Travel</string>
+    <string name="SignUp_Hobby_Swim">Swim</string>
+    <string name="SignUp_Hobby_Fencing">Fencing</string>
+    <string name="SignUp_Hobby_Dance">Dance</string>
+    <string name="SignUp_Hobby_Read">Read</string>
+    <string name="SignUp_Hobby_Chess">Chess</string>
+    <string name="SignUp_Hobby_Paint">Paint</string>
+    <string name="SignUp_Hobby_Basketball">Basketball</string>
+    <string name="SignUp_Hobby_Guitar">Guitar</string>
+    <string name="SignUp_Accept">Accept</string>
+    <string name="SignUp_Sex_Male">Male</string>
+    <string name="SignUp_Sex_Female">Female</string>
+    <string name="SignUp_Read">Accept the agreement</string>
+    <string name="Comfirm">Comfirm</string>
+    <string name="Cancel">Cancel</string>
+    <string name="SignUp_Clean">Clean</string>
+    <string name="Agreement">Agreement Context</string>
+    <string name="Reset_ID">ID Number</string>
+    <string name="Reset_StuID">Student ID</string>
+    <string name="Reset_Check">Check</string>
+</resources>

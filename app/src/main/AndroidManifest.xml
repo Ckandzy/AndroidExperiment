@@ -28,6 +28,8 @@
         <activity android:name=".Preview" />
         <activity android:name=".Reset" />
         <activity android:name=".Agreement" />
+        <activity android:name=".Relative" />
+        <activity android:name=".Frame" />
     </application>
 
 </manifest>

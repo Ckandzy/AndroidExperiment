@@ -108,6 +108,40 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="点我盖章" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="投诉" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/button10"
+            android:text="建议" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/button10"
+            android:layout_alignStart="@+id/button11"
+            android:text="即兴" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button12"
+            android:layout_alignParentEnd="true"
+            android:text="表扬"
+            android:layout_toLeftOf="@id/button10"
+            android:layout_above="@id/button10"/>
     </RelativeLayout>
 
 </RelativeLayout>

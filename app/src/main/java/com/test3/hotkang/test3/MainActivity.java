@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void Login(View view)
     {
-        Intent intent = new Intent(this, SignUp.class);
+        Intent intent = new Intent(this, GridActivity.class);
         EditText Login_Email = findViewById(R.id.Login_Email);
         EditText Login_PWD = findViewById(R.id.Login_PWD);
         String email = Login_Email.getText().toString();
         String password = Login_PWD.getText().toString();
-        if(email.contentEquals("353223003@qq.com")&&password.contentEquals("123456"))
+        if(email.contentEquals("123456")&&password.contentEquals("123456"))
         {
             startActivity(intent);
         }

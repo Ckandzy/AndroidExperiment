@@ -3,19 +3,28 @@ package com.test3.hotkang.test3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class SignUp extends AppCompatActivity {
+public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    //判断是否为刚进去时触发onItemSelected的标志
+    private boolean one_selected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        ((Spinner)findViewById(R.id.spinner)).setOnItemSelectedListener(this);
     }
 
     public void Read(View view)
@@ -42,16 +51,13 @@ public class SignUp extends AppCompatActivity {
         Bundle data = new Bundle();
         EditText Email = findViewById(R.id.editText3);
         RadioGroup Sex = findViewById(R.id.radioGroup);
-        CheckBox[] box = new CheckBox[9];
+        CheckBox[] box = new CheckBox[6];
         box[0] = findViewById(R.id.checkBox);
         box[1] = findViewById(R.id.checkBox2);
-        box[2] = findViewById(R.id.checkBox3);
-        box[3] = findViewById(R.id.checkBox4);
-        box[4] = findViewById(R.id.checkBox5);
-        box[5] = findViewById(R.id.checkBox6);
-        box[6] = findViewById(R.id.checkBox7);
-        box[7] = findViewById(R.id.checkBox8);
-        box[8] = findViewById(R.id.checkBox9);
+        box[2] = findViewById(R.id.checkBox4);
+        box[3] = findViewById(R.id.checkBox5);
+        box[4] = findViewById(R.id.checkBox7);
+        box[5] = findViewById(R.id.checkBox8);
         data.putString("Email",Email.getText().toString());
         if(Sex.getCheckedRadioButtonId()==R.id.radioButton)
         {
@@ -62,7 +68,7 @@ public class SignUp extends AppCompatActivity {
             data.putString("Sex","Female");
         }
         ArrayList<String> strList = new ArrayList<String>();
-        for(int i = 0; i < 9; i++)
+        for(int i = 0; i < 6; i++)
         {
             if(box[i].isChecked())
             {
@@ -88,13 +94,10 @@ public class SignUp extends AppCompatActivity {
 
         CheckBox box1 = findViewById(R.id.checkBox);
         CheckBox box2 = findViewById(R.id.checkBox2);
-        CheckBox box3 = findViewById(R.id.checkBox3);
         CheckBox box4 = findViewById(R.id.checkBox4);
         CheckBox box5 = findViewById(R.id.checkBox5);
-        CheckBox box6 = findViewById(R.id.checkBox6);
         CheckBox box7 = findViewById(R.id.checkBox7);
         CheckBox box8 = findViewById(R.id.checkBox8);
-        CheckBox box9 = findViewById(R.id.checkBox9);
 
         RadioGroup Sex = findViewById(R.id.radioGroup);
 
@@ -104,15 +107,31 @@ public class SignUp extends AppCompatActivity {
 
         box1.setClickable(false);
         box2.setClickable(false);
-        box3.setClickable(false);
         box4.setClickable(false);
         box5.setClickable(false);
-        box6.setClickable(false);
         box7.setClickable(false);
         box8.setClickable(false);
-        box9.setClickable(false);
 
         Sex.clearCheck();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+    {
+        switch (parent.getId()){
+            case R.id.spinner:
+                if(one_selected)
+                Toast.makeText(SignUp.this,"Your education is：" + parent.getItemAtPosition(position).toString(),
+                        Toast.LENGTH_SHORT).show();
+                else one_selected = true;
+                break;
+        }
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent)
+    {
 
     }
 }

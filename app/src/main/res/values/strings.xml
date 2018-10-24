@@ -31,4 +31,9 @@
     <string name="Reset_ID">ID Number</string>
     <string name="Reset_StuID">Student ID</string>
     <string name="Reset_Check">Check</string>
+    <string name="SignUp_Education">Education</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

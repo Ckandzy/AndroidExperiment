@@ -247,7 +247,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/checkBox8"
         android:entries="@array/data"
-        android:spinnerMode="dialog" />/>
+        android:spinnerMode="dialog" />
 
     <TextView
         android:id="@+id/textView13"

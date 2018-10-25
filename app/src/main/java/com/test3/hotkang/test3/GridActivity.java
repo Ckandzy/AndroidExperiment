@@ -6,9 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
@@ -49,7 +47,7 @@ public class GridActivity extends AppCompatActivity {
                 {
                     case 1:
                     {
-                        Intent intent = new Intent(mContext, Contacts.class);
+                        Intent intent = new Intent(mContext, ContactsActivity.class);
                         startActivity(intent);
                     }break;
                     case 2:

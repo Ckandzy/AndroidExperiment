@@ -8,33 +8,40 @@ public class ItemContact {
     public ItemContact() {
     }
 
-    public ItemContact(String cName, String cPhoneNumber, int cPhoto) {
+    public ItemContact(String cName, String cPhoneNumber, int cPhoto)
+    {
         this.cName = cName;
         this.cPhoneNumber = cPhoneNumber;
         this.cPhoto = cPhoto;
     }
 
-    public String getcName() {
+    public String getcName()
+    {
         return cName;
     }
 
-    public String getcSpeak() {
+    public String getcPhoneNumber()
+    {
         return cPhoneNumber;
     }
 
-    public int getcIcon() {
+    public int getcPhoto()
+    {
         return cPhoto;
     }
 
-    public void setcName(String cName) {
+    public void setcName(String cName)
+    {
         this.cName = cName;
     }
 
-    public void setcSpeak(String cPhoneNumber) {
+    public void setcPhoneNumber(String cPhoneNumber)
+    {
         this.cPhoneNumber = cPhoneNumber;
     }
 
-    public void setcIcon(int cPhoto) {
+    public void setcPhoto(int cPhoto)
+    {
         this.cPhoto = cPhoto;
     }
 }

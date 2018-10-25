@@ -39,12 +39,13 @@
         </activity>
         <activity android:name=".Frame" />
         <activity android:name=".GridActivity" />
-        <activity android:name=".Contacts" />
+        <activity android:name=".ContactsActivity" />
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".ContactEditActivity"></activity>
     </application>
 
 </manifest>

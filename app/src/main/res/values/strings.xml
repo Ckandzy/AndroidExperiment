@@ -36,4 +36,10 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="Contact_Name">Name</string>
+    <string name="Contact_Photo">Photo</string>
+    <string name="Contact_PhoneNum">PhoneNumber</string>
+    <string name="Contact_Apply">Apply</string>
+    <string name="Contact_Delete">Delete</string>
+    <string name="Contact_Add">Add</string>
 </resources>

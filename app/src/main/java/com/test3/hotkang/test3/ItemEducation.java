@@ -1,20 +1,25 @@
 package com.test3.hotkang.test3;
 
-public class ItemEducation {
+public class ItemEducation
+{
     private String eName;
 
-    public ItemEducation() {
+    public ItemEducation()
+    {
     }
 
-    public ItemEducation(String eName) {
+    public ItemEducation(String eName)
+    {
         this.eName = eName;
     }
 
-    public String geteName() {
+    public String geteName()
+    {
         return eName;
     }
 
-    public void setehName(String eName) {
+    public void setehName(String eName)
+    {
         this.eName = eName;
     }
 }

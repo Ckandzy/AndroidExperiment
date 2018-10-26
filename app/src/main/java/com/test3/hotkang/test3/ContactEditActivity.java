@@ -71,7 +71,7 @@ public class ContactEditActivity extends AppCompatActivity implements AdapterVie
             }
             else
             {
-                setResult(1);
+                setResult(0);
             }
             finish();
         });

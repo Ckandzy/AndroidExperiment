@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -39,9 +40,10 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
 
         if(resultCode == 1)
         {
-            CheckBox Read = findViewById(R.id.SignUp_Read);
-
-            Read.setClickable(true);
+            CheckBox read = findViewById(R.id.SignUp_Read);
+            Button confirm = findViewById(R.id.SignUp_Confirm);
+            confirm.setClickable(true);
+            read.setClickable(true);
         }
     }
 
@@ -105,12 +107,12 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         Password.setText("");
         PWDRepeat.setText("");
 
-        box1.setClickable(false);
-        box2.setClickable(false);
-        box4.setClickable(false);
-        box5.setClickable(false);
-        box7.setClickable(false);
-        box8.setClickable(false);
+        box1.setChecked(false);
+        box2.setChecked(false);
+        box4.setChecked(false);
+        box5.setChecked(false);
+        box7.setChecked(false);
+        box8.setChecked(false);
 
         Sex.clearCheck();
     }

@@ -24,12 +24,9 @@ public class Reset extends AppCompatActivity {
             EditText Email = findViewById(R.id.editText7);
             EditText Password = findViewById(R.id.editText8);
             EditText PWDRepeat = findViewById(R.id.editText9);
-            Email.setFocusable(true);
-            Email.setFocusableInTouchMode(true);
-            Password.setFocusable(true);
-            Password.setFocusableInTouchMode(true);
-            PWDRepeat.setFocusable(true);
-            PWDRepeat.setFocusableInTouchMode(true);
+            Email.setEnabled(true);
+            Password.setEnabled(true);
+            PWDRepeat.setEnabled(true);
         }
         else
         {

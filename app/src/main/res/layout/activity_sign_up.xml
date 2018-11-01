@@ -204,6 +204,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:onClick="Confirm"
+        android:clickable="false"
         android:text="@string/Comfirm"
         app:layout_constraintEnd_toStartOf="@+id/SignUp_Clean"
         app:layout_constraintHorizontal_bias="0.5"

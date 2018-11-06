@@ -18,8 +18,8 @@ import java.util.Map;
 public class GridActivity extends AppCompatActivity {
     private Context mContext;
     private GridView grid_app;
-    private String[] appNames = new String[]{"camera", "contacts", "game", "setting", "weather"};
-    private int[] imgIds = new int[]{R.drawable.camera, R.drawable.contacts, R.drawable.game, R.drawable.setting1, R.drawable.weather};
+    private String[] appNames = new String[]{"camera", "contacts", "game", "setting", "weather", "memo"};
+    private int[] imgIds = new int[]{R.drawable.camera, R.drawable.contacts, R.drawable.game, R.drawable.setting1, R.drawable.weather, R.drawable.memo};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,12 @@ public class GridActivity extends AppCompatActivity {
                     }break;
                     case 2:
                     {
-                        Intent intent = new Intent(mContext, Relative.class);
+                        Intent intent = new Intent(mContext, RelativeActivity.class);
+                        startActivity(intent);
+                    }break;
+                    case 5:
+                    {
+                        Intent intent = new Intent(mContext, MemoActivity.class);
                         startActivity(intent);
                     }break;
                     default:

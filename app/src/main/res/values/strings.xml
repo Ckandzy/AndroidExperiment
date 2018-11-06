@@ -42,4 +42,8 @@
     <string name="Contact_Apply">Apply</string>
     <string name="Contact_Delete">Delete</string>
     <string name="Contact_Add">Add</string>
+    <string name="Login_Remember">Remember Password</string>
+    <string name="Memo_FileName">Please enter the file name</string>
+    <string name="Memo_Load">Load</string>
+    <string name="Memo_Save">Save</string>
 </resources>

@@ -3,7 +3,6 @@ package com.test3.hotkang.test3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,8 +13,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Map;
 
-public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class SignUpActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //判断是否为刚进去时触发onItemSelected的标志
     private boolean one_selected = false;
@@ -30,7 +30,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
 
     public void Read(View view)
     {
-        Intent intent = new Intent(this, Agreement.class);
+        Intent intent = new Intent(this, AgreementActivity.class);
         startActivityForResult(intent,1);
     }
 
@@ -49,10 +49,30 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
 
     public void Confirm(View view)
     {
-        Intent intent = new Intent(this, Preview.class);
+        Intent intent = new Intent(this, PreviewActivity.class);
         Bundle data = new Bundle();
         EditText Email = findViewById(R.id.editText3);
+        EditText Password = findViewById(R.id.editText4);
+        EditText Repeat = findViewById(R.id.editText5);
         RadioGroup Sex = findViewById(R.id.radioGroup);
+        CheckBox read = findViewById(R.id.SignUp_Read);
+
+        if(!read.isChecked())
+        {
+            Toast.makeText(this,"Please read the agreement", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(!Password.getText().toString().equals(Repeat.getText().toString()))
+        {
+            Toast.makeText(this,"Invalid password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(Email.getText().toString().isEmpty())
+        {
+            Toast.makeText(this,"Invalid email ", Toast.LENGTH_SHORT).show();
+            return;
+        }
         CheckBox[] box = new CheckBox[6];
         box[0] = findViewById(R.id.checkBox);
         box[1] = findViewById(R.id.checkBox2);
@@ -60,14 +80,18 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         box[3] = findViewById(R.id.checkBox5);
         box[4] = findViewById(R.id.checkBox7);
         box[5] = findViewById(R.id.checkBox8);
-        data.putString("Email",Email.getText().toString());
-        if(Sex.getCheckedRadioButtonId()==R.id.radioButton)
+        data.putString("Email", Email.getText().toString());
+        if(Sex.getCheckedRadioButtonId() == R.id.radioButton)
         {
-            data.putString("Sex","Male");
+            data.putString("Sex", "Male");
+        }
+        else if(Sex.getCheckedRadioButtonId() == R.id.radioButton2)
+        {
+            data.putString("Sex", "Female");
         }
         else
         {
-            data.putString("Sex","Female");
+
         }
         ArrayList<String> strList = new ArrayList<String>();
         for(int i = 0; i < 6; i++)
@@ -78,6 +102,9 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
             }
 
         }
+        SharedHelper sh = new SharedHelper(this);
+        sh.save(Email.getText().toString(), Password.getText().toString());
+
         data.putStringArrayList("Hobby",strList);
         intent.putExtras(data);
         startActivityForResult(intent,1);
@@ -123,7 +150,7 @@ public class SignUp extends AppCompatActivity implements AdapterView.OnItemSelec
         switch (parent.getId()){
             case R.id.spinner:
                 if(one_selected)
-                Toast.makeText(SignUp.this,"Your education is：" + parent.getItemAtPosition(position).toString(),
+                Toast.makeText(SignUpActivity.this,"Your education is：" + parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
                 else one_selected = true;
                 break;

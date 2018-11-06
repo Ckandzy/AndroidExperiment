@@ -11,24 +11,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp">
+        <activity android:name=".SignUpActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Preview" />
-        <activity android:name=".Reset" />
-        <activity android:name=".Agreement" />
-        <activity android:name=".Relative">
+        <activity android:name=".PreviewActivity" />
+        <activity android:name=".ResetActivity" />
+        <activity android:name=".AgreementActivity" />
+        <activity android:name=".RelativeActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -37,7 +37,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Frame" />
+        <activity android:name=".FrameActivity" />
         <activity android:name=".GridActivity" />
         <activity android:name=".ContactsActivity" />
         <activity
@@ -45,7 +45,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen"
             android:theme="@style/FullscreenTheme" />
-        <activity android:name=".ContactEditActivity"></activity>
+        <activity android:name=".ContactEditActivity" />
+        <activity android:name=".MemoActivity"></activity>
     </application>
 
 </manifest>

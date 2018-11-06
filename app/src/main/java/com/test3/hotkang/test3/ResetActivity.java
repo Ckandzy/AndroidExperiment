@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Reset extends AppCompatActivity {
+import java.util.Map;
+
+public class ResetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,7 @@ public class Reset extends AppCompatActivity {
     {
         EditText idNum = findViewById(R.id.editText);
         EditText stuId = findViewById(R.id.editText6);
+
         if(idNum.getText().toString().equals("500381")&&stuId.getText().toString().equals("11503010227"))
         {
             EditText Email = findViewById(R.id.editText7);
@@ -37,14 +40,14 @@ public class Reset extends AppCompatActivity {
 
     public void Confirm(View view)
     {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,LoginActivity.class);
         EditText Email = findViewById(R.id.editText7);
         EditText Password = findViewById(R.id.editText8);
         EditText PWDRepeat = findViewById(R.id.editText9);
         if(Password.getText().toString().equals(PWDRepeat.getText().toString()))
         {
-            intent.putExtra("Email",Email.getText().toString());
-            intent.putExtra("Password",Password.getText().toString());
+            SharedHelper sh = new SharedHelper(this);
+            sh.save(Email.getText().toString(), Password.getText().toString());
         }
         else
         {

@@ -3,7 +3,6 @@ package com.test3.hotkang.test3;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -12,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class Relative extends AppCompatActivity {
+public class RelativeActivity extends AppCompatActivity {
 
     public Context context = null;
     @SuppressLint("ClickableViewAccessibility")
@@ -30,7 +29,7 @@ public class Relative extends AppCompatActivity {
             return false;
         });
         btnStart.setOnClickListener(v -> {
-            Intent intent = new Intent(context, Frame.class);
+            Intent intent = new Intent(context, FrameActivity.class);
             startActivity(intent);
         });
         btn.setOnTouchListener((v, event)->{
@@ -48,13 +47,13 @@ public class Relative extends AppCompatActivity {
         ImageButton buttonQuit = findViewById(R.id.imageButton10);
 
         buttonHelp.setOnClickListener((v -> {
-            Toast.makeText(Relative.this,"帮助",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RelativeActivity.this,"帮助",Toast.LENGTH_SHORT).show();
         }));
         buttonSetting.setOnClickListener((v -> {
-            Toast.makeText(Relative.this,"设置",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RelativeActivity.this,"设置",Toast.LENGTH_SHORT).show();
         }));
         buttonRank.setOnClickListener((v -> {
-            Toast.makeText(Relative.this,"风云榜",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RelativeActivity.this,"风云榜",Toast.LENGTH_SHORT).show();
         }));
         buttonQuit.setOnClickListener((v -> {
             finish();
